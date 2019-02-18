@@ -2,8 +2,56 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>Eng-Ops</groupId>
   <artifactId>JUnitPerf</artifactId>
+  <packaging>jar</packaging>
   <version>1.0.1</version>
-  <build>
+  <name>JUnitPerf</name>
+  <description>Eng Ops JUnitPerf</description>
+  <dependencies>
+  <!-- test dependencies -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+		<dependency>
+		    <groupId>org.slf4j</groupId>
+		    <artifactId>slf4j-api</artifactId>
+		    <version>1.7.25</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
+		<dependency>
+		    <groupId>org.slf4j</groupId>
+		    <artifactId>slf4j-simple</artifactId>
+		    <version>1.7.25</version>
+		    <scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/log4j/log4j -->
+		<dependency>
+		    <groupId>log4j</groupId>
+		    <artifactId>log4j</artifactId>
+		    <version>1.2.17</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+		<dependency>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-lang3</artifactId>
+		    <version>3.8.1</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.jboss.resteasy/resteasy-jaxrs -->
+		<dependency>
+		    <groupId>org.jboss.resteasy</groupId>
+		    <artifactId>resteasy-jaxrs</artifactId>
+		    <version>2.3.4.Final</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.jsmart/zerocode-rest-bdd -->
+		<dependency>
+		    <groupId>org.jsmart</groupId>
+		    <artifactId>zerocode-rest-bdd</artifactId>
+		    <version>1.2.17</version>
+		</dependency>
+  </dependencies>
+     <build>
         <pluginManagement>
             <plugins>
                 <plugin>
@@ -20,7 +68,7 @@
     <distributionManagement>
         <repository>
             <id>internal</id>
-            <url>file://${project.build.directory}/mvn-repo</url>
+            <url>file://${project.build.directory}\mvn-repo</url>
         </repository>
     </distributionManagement>
 </project>
